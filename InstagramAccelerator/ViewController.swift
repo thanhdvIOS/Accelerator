@@ -21,7 +21,6 @@ class ViewController: UIViewController {
     tbv.delegate = self
     tbv.dataSource = self
     return tbv
-    
   }()
   
   override func viewDidLoad() {

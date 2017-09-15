@@ -25,11 +25,8 @@ class ContentView: UIView {
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-    
     setupCollectionView()
-    
   }
-  
   
   func setupCollectionView(){
     
@@ -46,13 +43,9 @@ class ContentView: UIView {
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-  
-  
 }
 
-
 extension ContentView: UICollectionViewDelegate,UICollectionViewDataSource {
-  
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return 2
@@ -63,7 +56,6 @@ extension ContentView: UICollectionViewDelegate,UICollectionViewDataSource {
     let index = indexPath.row
     
     switch index {
-      
         case 0:
           cell.backgroundView = UIImageView(image: #imageLiteral(resourceName: "01"))
           break

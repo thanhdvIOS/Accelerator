@@ -7,6 +7,7 @@
 //
 
 // test git
+// v3
 
 import UIKit
 
@@ -24,9 +25,7 @@ class InstagramCell: UITableViewCell {
     override func awakeFromNib() {
       super.awakeFromNib()
       setupUI()
-      
     }
-  
   
     func setupUI(){
       iconImageView.layer.cornerRadius = 20
@@ -37,7 +36,10 @@ class InstagramCell: UITableViewCell {
       doubleGestureTap.numberOfTapsRequired = 2
       cursorImageView.addGestureRecognizer(doubleGestureTap)
       let contentView = ContentView(frame: viewContent.frame)
+      contentView.translatesAutoresizingMaskIntoConstraints = false
       viewContent.addSubview(contentView)
+      viewContent.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0":contentView]))
+      viewContent.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0":contentView]))
     }
 
     //MARK: - Handle Action

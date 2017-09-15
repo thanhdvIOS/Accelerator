@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.makeKeyAndVisible()
     
-    
     let tabBar = TabBarController()
     let vcHome = HomeController()
     let vcSearch = SearchController()
