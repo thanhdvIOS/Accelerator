@@ -6,12 +6,7 @@
 //  Copyright © 2017 OminextMobile. All rights reserved.
 //
 
-
-
-// Do Van Thanh
-// Do Van Thanh
-// Do Van Thanh
-// Do Van Thanh
+// test git
 
 import UIKit
 
