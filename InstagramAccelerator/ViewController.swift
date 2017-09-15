@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -136,7 +137,13 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
   }
  
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 0.9*height
+    
+    let image = #imageLiteral(resourceName: "01")
+    let rect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: CGFloat(MAXFLOAT))
+    
+    let size = AVMakeRect(aspectRatio: image.size, insideRect: rect)
+    
+    return size.height / 0.7
   }
   
 }
